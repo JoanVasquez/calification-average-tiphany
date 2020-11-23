@@ -97,7 +97,7 @@
     });
 
     result += `<tr>
-                  <td class="bg-dark text-white">Promedio</td>
+                  <td class="bg-header text-white">Promedio</td>
                   <td class=${generateCalificationColor(promedio / total)}>${
       promedio / total
     }</td>
