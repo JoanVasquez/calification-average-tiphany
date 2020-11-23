@@ -67,6 +67,15 @@
     calificationBody.innerHTML = generateTable();
   };
 
+  const generateCalificationColor = (calification) => {
+    if (calification <= 2.5) {
+      return "text-danger";
+    } else if (calification <= 2.9) {
+      return "text-warning";
+    }
+    return "text-success";
+  };
+
   const generateTable = () => {
     let result = "";
     let promedio = 0;
@@ -77,7 +86,9 @@
         promedio += Number(calification.calification);
         result += `<tr>
                             <td>${calification.subject}</td>
-                            <td>${calification.calification}</td>
+                            <td class=${generateCalificationColor(
+                              calification.calification
+                            )}>${calification.calification}</td>
                             <td class="text-center" onClick="onRemoveCalification(${index})">
                                 <i class="far fa-trash-alt text-danger"></i>
                             </td>
@@ -87,7 +98,9 @@
 
     result += `<tr>
                   <td class="bg-dark text-white">Promedio</td>
-                  <td>${promedio / total}</td>
+                  <td class=${generateCalificationColor(promedio / total)}>${
+      promedio / total
+    }</td>
                  </tr>`;
     return result;
   };
