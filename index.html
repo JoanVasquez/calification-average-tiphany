@@ -15,67 +15,105 @@
     <title>Calification Average</title>
   </head>
   <body>
-    <div class="container mt-5 shadow-sm">
-      <div class="row">
-        <div class="col-12">
-          <h1>Stephany Aponte - 1030654670</h1>
-          <hr />
+    <div class="container mt-5 shadow-sm mb-5">
+      <h3>Stephany Aponte - 1030654670</h3>
+      <div class="row m-3">
+        <div class="col-sm-12 col-lg-6">
+          <div class="row">
+            <div class="col-sm-12 col-lg-4 text-center mt-3">
+              <img
+                class="img-fluid rounded avatar"
+                src="assets/images/pp.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="col-sm-12 col-lg-7 form p-0 mt-3">
+              <div class="bg-header text-white p-3 rounded-sm">Nueva Notas</div>
+              <table class="table table-borderless">
+                <tbody>
+                  <form id="calification=form">
+                    <tr>
+                      <td class="h5">Materia</td>
+                      <td>
+                        <input type="text" class="form-control" id="subject" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="h5">Nota</td>
+                      <td>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="calification"
+                          step="0.1"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>
+                        <button type="submit" class="btn btn-secondary">
+                          Agregar
+                        </button>
+                      </td>
+                    </tr>
+                  </form>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-12">
+              <h2>Agrega alguna nota</h2>
+              <table class="table border-secondary border">
+                <thead class="text-white bg-header">
+                  <tr>
+                    <th scope="col">Materia</th>
+                    <th scope="col">Nota</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody class="table-bordered" id="calification-body"></tbody>
+              </table>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-3 text-center">
-          <img
-            class="img-fluid rounded avatar"
-            src="assets/images/pp.jpeg"
-            alt=""
-          />
-        </div>
-        <div class="col-sm-12 col-md-8 form p-0">
-          <div class="bg-header text-white p-3 rounded-sm">Nueva Notas</div>
-          <table class="table table-borderless">
-            <tbody>
-              <form id="calification=form">
-                <tr>
-                  <td class="h5">Materia</td>
-                  <td>
-                    <input type="text" class="form-control" id="subject" />
-                  </td>
-                </tr>
-                <tr>
-                  <td class="h5">Nota</td>
-                  <td>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="calification"
-                      step="0.1"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>
-                    <button type="submit" class="btn btn-secondary">
-                      Agregar
-                    </button>
-                  </td>
-                </tr>
-              </form>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="row mt-3">
-        <div class="col-12">
-          <h2>Agrega alguna nota</h2>
-          <table class="table border-secondary border">
-            <thead class="text-white bg-header">
-              <tr>
-                <th scope="col">Materia</th>
-                <th scope="col">Nota</th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody class="table-bordered" id="calification-body"></tbody>
-          </table>
+        <div class="col-sm-12 col-lg-6 instructions">
+          <ul class="p-3">
+            <li>
+              Al hacer click en el botón agregar se adiciona la nota a la tabla
+              y recalcula el promedio de todas las notas.
+            </li>
+            <li>
+              Al hacer click en el icono rojo al final de cada fila de la tabla,
+              debe eliminar la nota y recalcula el promedio
+            </li>
+            <li>Color de las notas y el promedio:</li>
+            <li>Entre 0 y 2.5 = rojo</li>
+            <li>Entre 2.6 y 2.9 = naranja</li>
+            <li>Entre 3.0 y 5.0 = verde</li>
+            <li>Al agregar una nueva materia no debe permitir:</li>
+            <li>Agregar materias vacías</li>
+            <li>Notas no numéricas</li>
+            <li>Notas por fuera de 0 y 5.0</li>
+            <li>Se debe respetar los colores, alineación, fuentes, etc</li>
+            <li>
+              El título de la página debe tener el nombre del estudiante y su
+              documento de identidad.
+            </li>
+            <li>Esta nota debe estar presente en la página</li>
+            <li>
+              La entrega consiste en la URL del sitio publicado en Netlify
+            </li>
+          </ul>
+          <div class="row colors-footer text-center pt-3 pb-3">
+            <div class="col-sm-12 col-lg-4 p-3 color-1">#6697C8</div>
+            <div class="col-sm-12 col-lg-4 p-3 color-2">#FF0B0B</div>
+            <div class="col-sm-12 col-lg-4 p-3 color-3">#F0F0F0</div>
+            <div class="col-sm-12 col-lg-4 p-3 color-4">#FF9900</div>
+            <div class="col-sm-12 col-lg-4 p-3 color-5">#2CD078</div>
+            <div class="col-sm-12 col-lg-4 p-3 color-6">#FEFFE3</div>
+          </div>
         </div>
       </div>
     </div>
